@@ -1,4 +1,16 @@
-# 上海公交 API
+# 上海公交 API（非官方）
+
+### 访问控制与对策
+由于此处列出的 API 并非公开接口，因此存在一定的访问控制约束，直接请求的话一般会被拒绝。
+
+目前发现可以采取以下措施绕过其访问控制约束：
+
+1. 请求头（Header）始终附加 User-Agent:  Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.100 Safari/537.36
+2. 开启 HTTP 客户端会话机制（Cookie)
+3. 访问[主页（页面）](主页（页面）)
+4. 访问[公交实时到站（页面）](公交实时到站（页面）)
+5. 此时可以访问其它 API 接口，请注意 Cookie 的时效性
+
 
 ### 主页（页面）
 
@@ -7,6 +19,7 @@ https://shanghaicity.openservice.kankanews.com/
 ```
 
 ### 公交实时到站（页面）
+
 
 ```
 https://shanghaicity.openservice.kankanews.com/public/bus
@@ -39,6 +52,10 @@ POST https://shanghaicity.openservice.kankanews.com/public/bus/get
 根据公交线路唯一标识查询其上下行和途径站点信息
 
 ```
+请求头附加：
+
+Referer: https://shanghaicity.openservice.kankanews.com/public/bus
+
 POST https://shanghaicity.openservice.kankanews.com/public/bus/mes/sid/${sid}      
 ```
 
