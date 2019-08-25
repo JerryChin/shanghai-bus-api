@@ -56,7 +56,7 @@ POST https://shanghaicity.openservice.kankanews.com/public/bus/get
 
 Referer: https://shanghaicity.openservice.kankanews.com/public/bus
 
-POST https://shanghaicity.openservice.kankanews.com/public/bus/mes/sid/${sid}      
+GET https://shanghaicity.openservice.kankanews.com/public/bus/mes/sid/${sid}      
 ```
 
 请求参数
